@@ -1,0 +1,9 @@
+insert into have(team_id, sponsor_id) values (1,3),(1,4),(1,9);
+insert into have(team_id, sponsor_id) values (2,5),(2,1),(2,2);
+insert into have(team_id, sponsor_id) values (8,6),(8,10);
+insert into have(team_id, sponsor_id) values (10,8),(10,7),(10,10);
+insert into have(team_id, sponsor_id) values (5,1);
+insert into have(team_id, sponsor_id) values (3,3),(3,8);
+insert into have(team_id, sponsor_id) values (4,10);
+insert into have(team_id, sponsor_id) values (6,3),(6,2),(6,4);
+insert into have(team_id, sponsor_id) values (7,9),(7,4);
