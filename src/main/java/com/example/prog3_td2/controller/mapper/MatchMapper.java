@@ -1,6 +1,6 @@
 package com.example.prog3_td2.controller.mapper;
 
-import com.example.prog3_td2.controller.response.MatchResponse;
+import com.example.prog3_td2.controller.rest.MatchResponse;
 import com.example.prog3_td2.model.MatchEntity;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;

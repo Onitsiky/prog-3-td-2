@@ -1,7 +1,7 @@
 package com.example.prog3_td2.controller;
 
 import com.example.prog3_td2.controller.mapper.TeamMapper;
-import com.example.prog3_td2.controller.response.TeamResponse;
+import com.example.prog3_td2.controller.rest.TeamResponse;
 import com.example.prog3_td2.model.TeamEntity;
 import com.example.prog3_td2.service.TeamService;
 import lombok.AllArgsConstructor;
@@ -30,6 +30,11 @@ public class TeamController {
         .toList();
   }
 
+  @GetMapping("/{team_id}")
+  public TeamResponse getById (@PathVariable int team_id){
+    return mapper.toRest(service.getById(team_id));
+  }
+  /*
   @PostMapping
   public List<TeamEntity> saveAll (@RequestBody List<TeamEntity> toSave){
     return service.saveAll(toSave);
@@ -44,4 +49,5 @@ public class TeamController {
   public TeamEntity deleteById (@PathVariable int team_id) {
     return service.deleteById(team_id);
   }
+   */
 }

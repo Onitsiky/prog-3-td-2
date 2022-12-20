@@ -16,7 +16,10 @@ public class TeamService {
   public List<TeamEntity> getAll () {
     return repository.findAll();
   }
-
+  public TeamEntity getById (int id){
+    return repository.findById(String.valueOf(id)).get();
+  }
+  /*
   @Transactional
   public List<TeamEntity> saveAll (List<TeamEntity> toSave) {
     return repository.saveAll(toSave);
@@ -32,4 +35,5 @@ public class TeamService {
     repository.deleteById(String.valueOf(id));
     return actual;
   }
+   */
 }

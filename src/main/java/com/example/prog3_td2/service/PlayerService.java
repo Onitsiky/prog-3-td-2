@@ -5,6 +5,7 @@ import com.example.prog3_td2.repository.PlayerRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -13,9 +14,13 @@ public class PlayerService {
   private final PlayerRepository repository;
 
   public List<PlayerEntity> getAll (){
-    return repository.findAll();
+    return repository.findAll().stream().sorted(Comparator.comparingInt(PlayerEntity::getNumber)).toList();
   }
 
+  public PlayerEntity getById (int id){
+    return repository.findById(String.valueOf(id)).get();
+  }
+  /*
   public List<PlayerEntity> saveAll (List<PlayerEntity> toSave){
     return repository.saveAll(toSave);
   }
@@ -29,4 +34,6 @@ public class PlayerService {
     repository.deleteById(String.valueOf(id));
     return actual;
   }
+
+   */
 }

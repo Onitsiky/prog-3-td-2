@@ -18,6 +18,11 @@ public class SponsorService {
     return repository.findAll();
   }
 
+  public SponsorEntity getById (int id){
+    return repository.findById(String.valueOf(id)).get();
+  }
+
+  /*
   @Transactional
   public List<SponsorEntity> saveAll (List<SponsorEntity> toSave){
     return repository.saveAll(toSave);
@@ -33,4 +38,5 @@ public class SponsorService {
     repository.deleteById(String.valueOf(id));
     return actual;
   }
+   */
 }

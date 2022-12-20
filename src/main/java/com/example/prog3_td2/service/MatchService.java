@@ -15,4 +15,8 @@ public class MatchService {
   public List<MatchEntity> getAll (){
     return repository.findAll();
   }
+
+  public MatchEntity getById (int id){
+    return repository.findById(String.valueOf(id)).get();
+  }
 }

@@ -24,6 +24,12 @@ public class SponsorController {
   public List<SponsorEntity> getAll (){
     return service.getAll();
   }
+
+  @GetMapping("/{sponsor_id}")
+  public SponsorEntity getById (@PathVariable int sponsor_id){
+    return service.getById(sponsor_id);
+  }
+  /*
   @PostMapping
   public List<SponsorEntity> saveAll (@RequestBody List<SponsorEntity> toSave){
     return service.saveAll(toSave);
@@ -37,4 +43,5 @@ public class SponsorController {
   public SponsorEntity deleteById (@PathVariable int sponsor_id){
     return service.deleteById(sponsor_id);
   }
+   */
 }

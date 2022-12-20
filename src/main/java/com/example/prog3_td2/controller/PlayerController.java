@@ -1,7 +1,7 @@
 package com.example.prog3_td2.controller;
 
 import com.example.prog3_td2.controller.mapper.PlayerMapper;
-import com.example.prog3_td2.controller.response.PlayerResponse;
+import com.example.prog3_td2.controller.rest.PlayerResponse;
 import com.example.prog3_td2.model.PlayerEntity;
 import com.example.prog3_td2.service.PlayerService;
 import lombok.AllArgsConstructor;
@@ -28,6 +28,10 @@ public class PlayerController {
     return service.getAll().stream()
         .map(mapper::toRest)
         .toList();
+  }
+  @GetMapping("/{player_id}")
+  public PlayerResponse getById (@PathVariable int player_id){
+    return mapper.toRest(service.getById(player_id));
   }
   /*
   @PostMapping
