@@ -3,7 +3,7 @@ info:
   title: Soccer 5
   version: '1.0'
 servers:
-  - url: https://api.server.test/v1
+  - url: https://localhost:8080
 paths:
   /teams:
     get:
@@ -143,7 +143,7 @@ paths:
             schema:   
               type: array
               items: 
-                $ref: "#/components/schemas/Player"
+                $ref: "#/components/schemas/UpdatePlayer"
       responses:
         '200':
           description: updated teams
@@ -300,18 +300,6 @@ components:
       properties:
         name:
           type: string
-        players:
-          type: array
-          items: 
-            properties:
-              name:
-                type: string
-        sponsors:
-          type: array
-          items: 
-            properties:
-              name:
-                type: string
     UpdateTeam:
       type: object
       properties:
@@ -333,6 +321,15 @@ components:
           type: string
         number: 
           type: integer
+        team:
+          type: string
+    UpdatePlayer:
+      type: object
+      properties:
+        id:
+          type: integer
+      allOf:
+        - $ref: "#/components/schemas/CreatePlayer"
     Sponsor:
       type: object
       properties:
