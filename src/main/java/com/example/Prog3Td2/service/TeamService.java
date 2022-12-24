@@ -19,6 +19,9 @@ public class TeamService {
   public TeamEntity getById (int id){
     return repository.findById(String.valueOf(id)).get();
   }
+  public TeamEntity getByName (String name){
+    return repository.findByName(name);
+  }
 
   @Transactional
   public List<TeamEntity> saveAll (List<TeamEntity> toSave) {

@@ -4,6 +4,7 @@ import com.example.Prog3Td2.model.PlayerEntity;
 import com.example.Prog3Td2.repository.PlayerRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Comparator;
 import java.util.List;
@@ -20,11 +21,11 @@ public class PlayerService {
   public PlayerEntity getById (int id){
     return repository.findById(String.valueOf(id)).get();
   }
-  /*
+  @Transactional
   public List<PlayerEntity> saveAll (List<PlayerEntity> toSave){
     return repository.saveAll(toSave);
   }
-
+  @Transactional
   public List<PlayerEntity> updateAll (List<PlayerEntity> toUpdate){
     return repository.saveAll(toUpdate);
   }
@@ -34,6 +35,4 @@ public class PlayerService {
     repository.deleteById(String.valueOf(id));
     return actual;
   }
-
-   */
 }
