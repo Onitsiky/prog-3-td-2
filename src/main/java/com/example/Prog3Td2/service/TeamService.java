@@ -2,6 +2,7 @@ package com.example.Prog3Td2.service;
 
 import com.example.Prog3Td2.model.TeamEntity;
 import com.example.Prog3Td2.repository.TeamRepository;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,7 @@ public class TeamService {
   public TeamEntity getById (int id){
     return repository.findById(String.valueOf(id)).get();
   }
-  /*
+
   @Transactional
   public List<TeamEntity> saveAll (List<TeamEntity> toSave) {
     return repository.saveAll(toSave);
@@ -34,5 +35,4 @@ public class TeamService {
     repository.deleteById(String.valueOf(id));
     return actual;
   }
-   */
 }
