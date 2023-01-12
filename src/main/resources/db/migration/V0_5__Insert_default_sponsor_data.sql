@@ -8,3 +8,5 @@ insert into sponsor (id,name) values (7,'Groupe sodiat');
 insert into sponsor (id,name) values (8,'Injet');
 insert into sponsor (id,name) values (9,'Carlton');
 insert into sponsor (id,name) values (10,'Radisson Blu');
+
+alter sequence sponsor_id_seq restart with 11;

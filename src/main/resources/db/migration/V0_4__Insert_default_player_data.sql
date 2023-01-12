@@ -48,3 +48,6 @@ insert into player (id,name,number,team_id) values (47,'IZily', 156, 10);
 insert into player (id,name,number,team_id) values (48,'RaZily', 256, 10);
 insert into player (id,name,number,team_id) values (49,'LeZily', 546, 10);
 insert into player (id,name,number,team_id) values (50,'DaZily', 526, 10);
+
+
+alter sequence player_id_seq restart with 51;

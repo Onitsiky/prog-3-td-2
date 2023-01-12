@@ -8,3 +8,5 @@ insert into team(id,name) values (7,'Manchester City');
 insert into team(id,name) values (8,'Manchester United');
 insert into team(id,name) values (9,'Atletico de Madrid');
 insert into team(id,name) values (10,'Juventus');
+
+alter sequence team_id_seq restart with 11;

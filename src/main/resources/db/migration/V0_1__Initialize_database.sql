@@ -10,6 +10,7 @@ create table match (
     stadium     varchar not null,
     foreigners  int not null unique,
     hosts       int not null unique,
+    primary key (id),
     constraint foreigners_fk foreign key (foreigners) references team(id),
     constraint hosts_fk foreign key (hosts) references team(id)
 );
@@ -35,5 +36,3 @@ create table have (
     constraint team_fk foreign key (team_id) references team(id),
     constraint sponsor_fk foreign key (sponsor_id) references sponsor(id)
 );
-
-alter sequence if exists serial restart with 51;
