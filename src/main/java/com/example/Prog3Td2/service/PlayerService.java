@@ -15,7 +15,8 @@ public class PlayerService {
   private final PlayerRepository repository;
 
   public List<PlayerEntity> getAll (){
-    return repository.findAll().stream().sorted(Comparator.comparingInt(PlayerEntity::getNumber)).toList();
+    return repository.findAll();
+    // .stream().sorted(Comparator.comparingInt(PlayerEntity::getNumber)).toList()
   }
 
   public PlayerEntity getById (int id){
