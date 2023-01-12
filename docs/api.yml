@@ -314,6 +314,8 @@ components:
           type: integer
         name:
           type: string
+        isGoalKeeper:
+          type: boolean
     CreatePlayer:
       type: object
       properties:
@@ -321,6 +323,8 @@ components:
           type: string
         number: 
           type: integer
+        isGoalKeeper:
+          type: boolean
         team:
           type: string
     UpdatePlayer:
@@ -352,7 +356,32 @@ components:
           type: object
           allOf:
             - $ref: "#/components/schemas/Team"
+          properties:
+            score:
+              type: integer
+            goalScorers:
+              type: array
+              items:
+                allOf:
+                  - $ref: "#/components/schemas/Score"
         outsiders:
           type: object
           allOf:
             - $ref: "#/components/schemas/Team"
+          properties:
+            score:
+              type: integer
+            goalScorers:
+              type: array
+              items:
+                allOf:
+                  - $ref: "#/components/schemas/Score"
+    Score:
+      type: object
+      properties:
+        scoringTime:
+          type: integer
+        isOnGoal:
+          type: boolean
+        goalScorer:
+          type: string
