@@ -31,6 +31,9 @@ public class PlayerEntity {
   @Column(nullable = false)
   private int number;
 
+  @Column(nullable = false, columnDefinition = "default false")
+  private Boolean isGoalKeeper;
+
   @ManyToOne
   @JoinColumn(name = "team_id")
   @JsonIgnore

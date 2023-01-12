@@ -11,4 +11,5 @@ public class CreatePlayerResponse {
   private String name;
   private int number;
   private String team;
+  private Boolean isGoalKeeper;
 }

@@ -25,6 +25,7 @@ public class PlayerMapper {
         .name(rest.getName())
         .number(rest.getNumber())
         .team(team)
+        .isGoalKeeper(rest.getIsGoalKeeper())
         .build();
   }
   public PlayerEntity toDomain (UpdatePlayerResponse rest){
@@ -34,6 +35,7 @@ public class PlayerMapper {
         .name(rest.getName())
         .number(rest.getNumber())
         .team(team)
+        .isGoalKeeper(rest.getIsGoalKeeper())
         .build();
   }
 }

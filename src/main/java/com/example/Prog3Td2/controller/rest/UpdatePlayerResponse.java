@@ -12,4 +12,6 @@ public class UpdatePlayerResponse {
   private int number;
   private String team;
   private int id;
+
+  private Boolean isGoalKeeper;
 }

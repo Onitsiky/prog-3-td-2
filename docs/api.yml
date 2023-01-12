@@ -314,8 +314,6 @@ components:
           type: integer
         name:
           type: string
-        isGoalKeeper:
-          type: boolean
     CreatePlayer:
       type: object
       properties:
