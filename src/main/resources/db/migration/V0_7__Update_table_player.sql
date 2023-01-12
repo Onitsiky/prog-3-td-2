@@ -1,0 +1,1 @@
+alter table player add column is_goal_keeper boolean not null default false;

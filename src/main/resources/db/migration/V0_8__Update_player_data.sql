@@ -1,0 +1,9 @@
+update player set is_goal_keeper=true where id=1;
+update player set is_goal_keeper=true where id=21;
+update player set is_goal_keeper=true where id=21;
+update player set is_goal_keeper=true where id=31;
+update player set is_goal_keeper=true where id=41;
+update player set is_goal_keeper=true where id=12;
+update player set is_goal_keeper=true where id=32;
+update player set is_goal_keeper=true where id=42;
+update player set is_goal_keeper=true where id=37;
