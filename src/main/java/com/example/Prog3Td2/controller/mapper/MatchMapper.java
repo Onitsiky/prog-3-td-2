@@ -23,11 +23,16 @@ public class MatchMapper {
     for (ScoreEntity scoreEntity : domain.getScore()) {
       String currentTeam = scoreEntity.getPlayer().getTeam().getName();
       String hostTeam = domain.getHosts().getName();
-      if(currentTeam.equals(hostTeam)){
-        hostsScore.add(scoreEntity);
-      }
-      else {
-        foreignersScore.add(scoreEntity);
+      String foreignerTeam = domain.getForeigners().getName();
+      if(scoreEntity.getMatch().getId() == domain.getId()) {
+        if (scoreEntity.getMatch().getId() == domain.getId()) {
+          if (currentTeam.equals(hostTeam)) {
+            hostsScore.add(scoreEntity);
+          }
+          else if (currentTeam.equals(foreignerTeam)){
+            foreignersScore.add(scoreEntity);
+          }
+        }
       }
     }
     TeamMatch hosts = teamMatchService.getTeamResponse(domain.getHosts(),hostsScore);

@@ -18,7 +18,7 @@ public class TeamMatchService {
   public TeamMatch getTeamResponse (TeamEntity domainTeam, List<ScoreEntity> domainScore){
     int goals = 0;
     for (ScoreEntity scoreEntity : domainScore) {
-      if(scoreEntity.getPlayer().getIsGoalKeeper() == false) {
+      if(scoreEntity.getPlayer().getIsGoalKeeper() == false && domainTeam.getId() == scoreEntity.getMatch().getId()) {
         if (scoreEntity.getIsOG() == false) {
           goals = goals + 1;
         }
