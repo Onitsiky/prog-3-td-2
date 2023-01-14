@@ -7,8 +7,8 @@ import lombok.Data;
 @Data
 @Builder
 @AllArgsConstructor
-public class PlayerResponse {
-  private int id;
-  private String name;
-  private boolean isGoalKeeper;
+public class ScoreResponse {
+  private PlayerResponse player;
+  private Boolean isOG;
+  private int scoringTime;
 }
