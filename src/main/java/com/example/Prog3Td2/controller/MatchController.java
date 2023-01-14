@@ -2,6 +2,7 @@ package com.example.Prog3Td2.controller;
 
 import com.example.Prog3Td2.controller.mapper.MatchMapper;
 import com.example.Prog3Td2.controller.rest.MatchResponse;
+import com.example.Prog3Td2.model.MatchEntity;
 import com.example.Prog3Td2.service.MatchService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +26,7 @@ public class MatchController {
 
   @GetMapping("/{match_id}")
   public MatchResponse getById (@PathVariable int match_id){
+    //return service.getById(match_id);
     return mapper.toRest(service.getById(match_id));
   }
 }

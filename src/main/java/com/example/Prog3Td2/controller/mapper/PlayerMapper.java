@@ -17,6 +17,7 @@ public class PlayerMapper {
     return PlayerResponse.builder()
         .id(domain.getId())
         .name(domain.getName())
+        .isGoalKeeper(domain.getIsGoalKeeper())
         .build();
   }
   public PlayerEntity toDomain (CreatePlayerResponse rest){
